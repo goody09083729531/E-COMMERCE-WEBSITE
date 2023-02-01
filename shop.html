@@ -4,14 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-Commerce Website</title>
+  <title>Our Shop</title>
   <link rel="stylesheet" href="/fontawesome-free-6.2.1-web/css/all.css">
   <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/CSS/style.css">
+
+  <style>
+    .product img{
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      object-fit: cover;
+    }
+
+    #featured > div.row.mx-auto.container > nav > ul > li.page-item.active > a{
+      background-color: black;
+    }
+
+    #featured > div.row.mx-auto.container > nav > ul > li:nth-child(n):hover > a{
+      background-color: coral;
+      color: #fff;
+    }
+
+    .pagination a{
+      color: #000;
+    }
+  </style>
 </head>
 <body>
-  
-  <!-- NAVIGATION -->
+
+    <!-- NAVIGATION -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
     <div class="container">
      <div><i id="logo" class="fas fa-shopping-bag"></i><span class="logo">GSALES</span></div>
@@ -21,13 +43,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="/HTML/index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/HTML/shop.html">Shop</a>
+            <a class="nav-link active" href="shop.html">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/HTML/blog.html">Blog</a>
+            <a class="nav-link" href="blog.html">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
@@ -39,67 +61,21 @@
             <i class="fas fa-search"></i>
           </li>
           <li id="shopping-bag" class="nav-item">
-            <i onclick="window.location.href='/HTML/cart.html'" class="fas fa-shopping-bag"></i>
+            <i onclick="window.location.href='/cart.html'" class="fas fa-shopping-bag"></i>
           </li>
       </div>
     </div>
   </nav>
 
-  <section id="home">
-    <div class="container">
-      <h5>NEW ARRIVALS</h5>
-      <h1><span>Best Price</span> This Year</h1>
-      <p>Offers The Most Trending Products of<br>the Year at Affordable Prices</p>
-      <button>Shop Now</button>
-    </div>
-  </section>
-
-  <section id="brand" class="container">
-    <div class="row m-0 py-5">
-      <img class="img-fluid col-lg-2 col-md-4 col-6" src="/img/Brand 1.png" alt="">
-      <img class="img-fluid col-lg-2 col-md-4 col-6" src="/img/Brand 3.png" alt="">
-      <img class="img-fluid col-lg-2 col-md-4 col-6" src="/img/Brand 1.png" alt="">
-      <img class="img-fluid col-lg-2 col-md-4 col-6" src="/img/Brand 3.png" alt="">
-      <img class="img-fluid col-lg-2 col-md-4 col-6" src="/img/Brand 3.png" alt="">
-      <img class="img-fluid col-lg-2 col-md-4 col-6" src="/img/Brand 1.png" alt="">
-    </div>
-  </section>
-
-  <section id="new" class="w-100">
-    <div class="row p-0 m-0">
-      <div class="one col-lg-4 col-md-12 col-12 p-0">
-        <img class="img-fluid" src="/img/pexels-ray-piedra-1456737.jpg" alt="">
-        <div class="details">
-          <h2>Extreme Rare Sneakers</h2>
-          <button class="text-uppercase">Shop Now</button>
-        </div>
-      </div>
-      <div class="one col-lg-4 col-md-12 col-12 p-0">
-        <img class="img-fluid" src="/img/pexels-anna-nekrashevich-8532616.jpg" alt="">
-        <div class="details">
-          <h2>Awesome Men's Outfit</h2>
-          <button class="text-uppercase">Shop Now</button>
-        </div>
-      </div>
-      <div class="one col-lg-4 col-md-12 col-12 p-0">
-        <img class="img-fluid" src="/img/pexels-obi-onyeador-13016967.jpg" alt="">
-        <div class="details">
-          <h2>Wristwatches Up to 50% Off</h2>
-          <button class="text-uppercase">Shop Now</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="featured" class="my-5 pb-5">
-    <div class="container text-center mt-5 py-5">
-      <h3>Our Featured</h3>
-      <hr class="mx-auto">
+  <section id="featured" class="my-5 py-5">
+    <div class="container mt-5 py-5">
+      <h2 class="font-weight-bold">Our Featured</h2>
+      <hr>
       <p>Here You Can Check Out Our New Products With Fair Price On GSALES</p>
     </div>
-    <div class="row mx-auto container-fluid">
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="/img/pexels-jd-danny-2385477.jpg" alt="">
+    <div class="row mx-auto container">
+      <div onclick="window.location.href='/HTML/singleproduct.html'" class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-anna-nekrashevich-8532616.jpg" alt="">
         <div class="star">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -150,26 +126,8 @@
         <h4 class="p-price">$92.00</h4>
         <button class="buy-btn">Buy Now</button>
       </div>
-    </div>
-  </section>
-
-  <section id="banner" class="my-5 py-5">
-    <div class="container">
-      <h4>HOLIDAY SALES</h4>
-      <h1>December Collection<br>Up to 20% Off.</h1>
-      <button class="text-uppercase">Shop Now</button>
-    </div>
-  </section>
-
-  <section id="clothes" class="my-5">
-    <div class="container text-center mt-5 py-5">
-      <h3>Dresses and Jumpsuits</h3>
-      <hr class="mx-auto">
-      <p>Here You Can Check Out Our New Products With Fair Price On GSALES</p>
-    </div>
-    <div class="row mx-auto container-fluid">
       <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="/img/pexels-azra-tuba-demir-14686936.jpg" alt="">
+        <img class="img-fluid mb-3" src="/img/pexels-monstera-7139805.jpg" alt="">
         <div class="star">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -177,131 +135,7 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
         </div>
-        <h5 class="p-name">Jumpsuits and Dresses</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="/img/pexels-arthouse-studio-4589425.jpg" alt="">
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <h5 class="p-name">Jumpsuits and Dresses</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="/img/pexels-konstantin-mishchenko-1926769.jpg" alt="">
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <h5 class="p-name">Jumpsuits and Dresses</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="/img/pexels-joshua-roberts-14666359.jpg" alt="">
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <h5 class="p-name">Jumpsuits and Dresses</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="watches" class="my-5">
-    <div class="container text-center mt-5 py-5">
-      <h3>Best Watches</h3>
-      <hr class="mx-auto">
-      <p>Here You Can Check Out Our New Products With Fair Price On GSALES</p>
-    </div>
-    <div class="row mx-auto container-fluid">
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="/img/pexels-andrey-matveev-5788857.jpg" alt="">
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <h5 class="p-name">Trending Watches</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="/img/pexels-obi-onyeador-13016967.jpg" alt="">
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <h5 class="p-name">Trending Watches</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="/img/pexels-huguenot-horology-9131685.jpg" alt="">
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <h5 class="p-name">Trending Watches</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="/img/pexels-soscenic-photography-10343908.jpg" alt="">
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <h5 class="p-name">Trending Watches</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="shoes" class="my-5 pb-5">
-    <div class="container text-center mt-5 py-5">
-      <h3>Trending Shoes</h3>
-      <hr class="mx-auto">
-      <p>Here You Can Check Out Our New Products With Fair Price On GSALES</p>
-    </div>
-    <div class="row mx-auto container-fluid">
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="/img/pexels-suraj-b-2759779.jpg" alt="">
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <h5 class="p-name">Trending Shoes</h5>
+        <h5 class="p-name">Sport Boots</h5>
         <h4 class="p-price">$92.00</h4>
         <button class="buy-btn">Buy Now</button>
       </div>
@@ -314,7 +148,150 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
         </div>
-        <h5 class="p-name">Trending Shoes</h5>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-ray-piedra-1456737.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-soscenic-photography-10343908.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-azra-tuba-demir-14686936.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-godisable-jacob-1027162.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-jeff-denlea-5556671.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-joshua-roberts-14666359.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-victoria-akvarel-14571364.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-karolina-grabowska-4498548.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-konstantin-mishchenko-1926769.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-jonathon-burton-8130587.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-obi-onyeador-13016967.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
         <h4 class="p-price">$92.00</h4>
         <button class="buy-btn">Buy Now</button>
       </div>
@@ -327,12 +304,12 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
         </div>
-        <h5 class="p-name">Trending Shoes</h5>
+        <h5 class="p-name">Sport Boots</h5>
         <h4 class="p-price">$92.00</h4>
         <button class="buy-btn">Buy Now</button>
       </div>
       <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="/img/pexels-jd-danny-2385477.jpg" alt="">
+        <img class="img-fluid mb-3" src="/img/pexels-suraj-b-2759779.jpg" alt="">
         <div class="star">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -340,10 +317,39 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
         </div>
-        <h5 class="p-name">Trending Shoes</h5>
+        <h5 class="p-name">Sport Boots</h5>
         <h4 class="p-price">$92.00</h4>
         <button class="buy-btn">Buy Now</button>
       </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/pexels-mnz-1598505.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+
+      <nav aria-label="...">
+        <ul class="pagination mt-5">
+          <li class="page-item disabled">
+            <a href="#" class="page-link" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item active"><a href="#" class="page-link">1</a></li>
+          <li class="page-item" aria-current="page">
+            <a href="#" class="page-link">2</a>
+          </li>
+          <li class="page-item"><a href="#" class="page-link">3</a></li>
+          <li class="page-item">
+            <a href="#" class="page-link">Next</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </section>
 
@@ -410,12 +416,13 @@
         </div>
     </div>
   </footer>
-
+    
+  
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
-  integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 
-  crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
-  integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" 
-  crossorigin="anonymous"></script>
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" 
+    crossorigin="anonymous"></script>
 </body>
 </html>
